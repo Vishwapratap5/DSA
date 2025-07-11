@@ -2,17 +2,17 @@ package Package_01;
 import java.util.Scanner;
 
 public class CheckIsPrime {
-    public void ShowResult(int num){
+    public boolean ShowResult(int num){
         int count=0;
         for(int i=1;i<=num;i++){
             if(num%i==0){
                 count+=1;
             }
         }
-        System.out.println(count);
         if(count==2){
-            System.out.println("Prime");
-        } else{  System.out.println("Not Prime");}
+            return true;
+        }
+        return false;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -20,7 +20,8 @@ public class CheckIsPrime {
         int number = sc.nextInt();
 
         CheckIsPrime c=new CheckIsPrime();
-        c.ShowResult(number);
+        boolean result=c.ShowResult(number);
+        System.out.println("Given number is prime ?"+result);
     }
 }
 
