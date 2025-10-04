@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Pattern Printing/Src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Arrays/Src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/bitManipulations" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Searching/BinarySearch" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
