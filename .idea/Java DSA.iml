@@ -10,6 +10,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Searching/BinarySearch" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Searching/Other" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Sorting/Package 1" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Practice" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
