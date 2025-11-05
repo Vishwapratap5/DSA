@@ -13,6 +13,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Practice" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Sorting/MergeSortQue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Sorting/Package2" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Matrix/Package1" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
