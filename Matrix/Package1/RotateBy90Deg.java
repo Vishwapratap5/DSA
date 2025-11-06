@@ -10,13 +10,13 @@ public class RotateBy90Deg {
                arr[j][i]=temp;
            }
         }
-        for(int i=0;i<arr.length;i++){
+        for(int i=0;i<arr[0].length;i++){
             int low=0;
             int high=arr.length-1;
             while(low<high){
-                int temp=arr[low][high];
-                arr[low][high]=arr[high][low];
-                arr[high][low]=temp;
+                int temp=arr[high][i];
+                arr[high][i]=arr[low][i];
+                arr[low][i]=temp;
                 low++;
                 high--;
             }
