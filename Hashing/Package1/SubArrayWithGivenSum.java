@@ -4,8 +4,8 @@ import java.util.HashSet;
 
 public class SubArrayWithGivenSum {
     public static void main(String[] args) {
-        int[] arr={1,2,3,4,5,6};
-        int sum=11;
+        int[] arr={5,2,2,1};
+        int sum=5;
         System.out.println(SubArrayWithGivenSum.isPresent(arr,sum));
     }
 
