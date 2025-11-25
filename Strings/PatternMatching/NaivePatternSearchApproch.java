@@ -1,8 +1,8 @@
-public class NaiveApproch {
+public class NaivePatternSearchApproch {
     public static void main(String[] args) {
         String str="ABCABA";;
         String pattern="ABC";
-        NaiveApproch.PatternLoc(str,pattern);
+        NaivePatternSearchApproch.PatternLoc(str,pattern);
     }
 
     private static void PatternLoc(String str, String pattern) {
