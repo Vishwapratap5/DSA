@@ -17,6 +17,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Hashing" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Strings/Package1" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Strings/PatternMatching" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
