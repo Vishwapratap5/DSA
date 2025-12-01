@@ -50,6 +50,7 @@ public class DoublyLinkedList {
 
     }
 
+
 //    private static void show() {
 //        Node temp = head;
 //        System.out.print("null-->");
