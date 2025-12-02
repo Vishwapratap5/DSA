@@ -27,6 +27,7 @@ public class SortedInsert {
                 System.out.print(temp.data+" --> ");
                 temp = temp.next;
             }
+            System.out.println("null");
         }
     }
 
@@ -36,6 +37,20 @@ public class SortedInsert {
             head = newNode;
             tail = newNode;
             return;
+        }
+        if(element<head.data){
+            newNode.next = head;
+            head = newNode;
+            return;
+        }
+        Node current = head;
+        while(current.next!=null && current.next.data<element){
+            current = current.next;
+        }
+        newNode.next = current.next;
+        current.next = newNode;
+        if(newNode.next==null){
+            tail=newNode;
         }
     }
 }
