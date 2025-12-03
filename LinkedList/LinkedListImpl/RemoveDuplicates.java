@@ -27,7 +27,7 @@ public class RemoveDuplicates {
            System.out.println("Nothing to remove");
            return;
        }
-       while(current!=null && current.next!= null){
+       while(current!=null &&   current.next!= null){
            if(current.data!=current.next.data){
                current = current.next;
            }

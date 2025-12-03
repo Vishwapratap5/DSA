@@ -2,7 +2,7 @@ package LinkedListImpl;
 
 import java.util.Scanner;
 
-public class ReverseLinkedList {
+public class ReverseInGroup {
     static Node head;
     static Node tail;
     public static void main(String[] args) {
@@ -11,30 +11,19 @@ public class ReverseLinkedList {
         do{
             System.out.println("Enter element:");
             int element = sc.nextInt();
-            ReverseLinkedList.add(element);
+            ReverseInGroup.add(element);
             System.out.println("Done..! Do you Want to continue?");
             Continue = sc.next();
         }while(Continue.equalsIgnoreCase("y"));
         sc.close();
-        ReverseLinkedList.show();
-        ReverseLinkedList.Revesrse();
-        ReverseLinkedList.show();
+        ReverseInGroup.show();
+        ReverseInGroup.Revesrse(3);
+        ReverseInGroup.show();
     }
 
-    private static void Revesrse() {
-        Node current = head;
-        Node prev = null;
-        Node next = null;
-        while(current != null) {
-            next = current.next;
-            current.next = prev;
-            prev = current;
-            current = next;
-        }
-        head = prev;
+    private static void Revesrse(int range) {
+
     }
-
-
 
     private static void show() {
         Node temp = head;
@@ -46,7 +35,7 @@ public class ReverseLinkedList {
         System.out.println();
     }
 
-    static void add(int data) {
+    private static void add(int data) {
         Node node = new Node(data);
         if(head == null) {
             head = node;
