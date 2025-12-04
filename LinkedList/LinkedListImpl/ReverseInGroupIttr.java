@@ -1,8 +1,10 @@
 package LinkedListImpl;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
-public class ReverseInGroup {
+public class ReverseInGroupIttr {
     static Node head;
     static Node tail;
     public static void main(String[] args) {
@@ -11,18 +13,27 @@ public class ReverseInGroup {
         do{
             System.out.println("Enter element:");
             int element = sc.nextInt();
-            ReverseInGroup.add(element);
+            ReverseInGroupIttr.add(element);
             System.out.println("Done..! Do you Want to continue?");
             Continue = sc.next();
         }while(Continue.equalsIgnoreCase("y"));
         sc.close();
-        ReverseInGroup.show();
-        ReverseInGroup.Revesrse(3);
-        ReverseInGroup.show();
+        ReverseInGroupIttr.show();
+        head= ReverseInGroupIttr.Revesrse(3);
+        ReverseInGroupIttr.show();
     }
 
-    private static void Revesrse(int range) {
-
+    private static Node Revesrse(int range) {
+        Node  next=null;
+        Node prev=null;
+        Node curr=head;
+        int count=range;
+        Node end=head;
+        Node start=head;
+        int stepCount=0;
+        while(end!=null && end.next!=null) {
+        }
+        return prev;
     }
 
     private static void show() {
