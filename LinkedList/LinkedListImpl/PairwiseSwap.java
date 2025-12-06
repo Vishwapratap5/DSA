@@ -22,16 +22,18 @@ public class PairwiseSwap {
     }
 
     private static void swap() {
-       Node slow = head;
-       Node fast=head.next;
-       Node next=null;
-       while(fast!=null && fast.next!=null){
-           next=fast.next;
-           fast.next=slow;
-           slow.next=next;
-           fast=next.next;
-           slow=next;
+       Node dummy=new Node(0);
+       dummy.next=head;
+       Node prev=dummy;
+       while(prev.next!=null && prev.next.next!=null){
+           Node a=prev.next;
+           Node b=prev.next.next;
+           a.next=b.next;
+           b.next=a;
+           prev.next=b;
+           prev=a;
        }
+       head=dummy.next;
     }
 
     private static void add(int data) {
