@@ -20,6 +20,7 @@
       <sourceFolder url="file://$MODULE_DIR$/LinkedList" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Stack/ArrayImpl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Stack/LinkedListImpl" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Stack/Problems" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
