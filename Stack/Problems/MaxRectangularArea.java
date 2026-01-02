@@ -15,7 +15,7 @@ public class MaxRectangularArea {
         System.out.println(Area);
     }
 
-    private int findMaxArea(int[] arr,int[] leftMin, int[] rightMin) {
+    public int findMaxArea(int[] arr,int[] leftMin, int[] rightMin) {
         int area=0;
         int maxArea=0;
         for(int i=0;i<leftMin.length;i++){
@@ -26,22 +26,26 @@ public class MaxRectangularArea {
         return maxArea;
     }
 
-    private int[] findRightMin(int[] arr) {
+
+    public int[] findRightMin(int[] arr) {
         Deque<Integer> stack = new ArrayDeque<>();
-        int[] res=new int[arr.length];
-        res[arr.length-1]=-1;
-        stack.push(arr.length-1);
-        for(int i=arr.length-2;i>=0;i--){
-            while(!stack.isEmpty() && arr[stack.peek()]>arr[i]){
+        int[] res = new int[arr.length];
+
+        stack.push(arr.length - 1);
+        res[arr.length - 1] = arr.length; // FIX
+
+        for (int i = arr.length - 2; i >= 0; i--) {
+            while (!stack.isEmpty() && arr[stack.peek()] >= arr[i]) {
                 stack.pop();
             }
-            res[i]=stack.isEmpty()?-1:stack.peek();
+            res[i] = stack.isEmpty() ? arr.length : stack.peek(); // FIX
             stack.push(i);
         }
         return res;
     }
 
-    private int[] findLeftMin(int[] arr) {
+
+    public int[] findLeftMin(int[] arr) {
         Deque<Integer> stack = new ArrayDeque<>();
         int[] res=new int[arr.length];
         res[0]=-1;
