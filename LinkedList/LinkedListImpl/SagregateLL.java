@@ -24,7 +24,7 @@ public class SagregateLL {
 
         while (current != null) {
 
-            // Create new node (your approach)
+            // Create new Node1 (your approach)
             Node node = new Node(current.data);
 
             if (current.data % 2 == 0) {     // EVEN
