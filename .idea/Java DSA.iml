@@ -22,6 +22,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Stack/LinkedListImpl" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Stack/Problems" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Queue" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Deque" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
