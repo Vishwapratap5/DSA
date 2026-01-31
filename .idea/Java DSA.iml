@@ -23,6 +23,10 @@
       <sourceFolder url="file://$MODULE_DIR$/Stack/Problems" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Queue" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Deque" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LeetCode/Arrays" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Tree" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BST" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Heaps" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
