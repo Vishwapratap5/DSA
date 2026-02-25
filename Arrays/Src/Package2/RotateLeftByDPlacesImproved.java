@@ -4,7 +4,7 @@ package Package2;
 import java.util.Arrays;
 
 public class RotateLeftByDPlacesImproved {
-   static int[] arr={1,2,3,4,5,6,7,8,9};
+   static int[] arr={1,2,3,4,5};
     public static void main(String[] args) {
         int D=3;
         RotateLeftByDPlacesImproved.Rotate(D);

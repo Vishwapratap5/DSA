@@ -3,14 +3,20 @@ import java.util.Arrays;
 public class RemoveDuplicates {
     public static void main(String[] args) {
         int[] arr={1,1,2,3,4,4,5,5};
-        int loc=0;
-        for(int i=1;i<arr.length;i++){
-            if(arr[i]!=arr[loc]){
-                loc++;
-                arr[loc]=arr[i];
+        int i=0;
+        int j=0;
+        while(j<arr.length){
+            if(arr[i]!=arr[j]){
+                i++;
+                int temp=arr[i];
+                arr[i]=arr[j];
+                arr[j]=temp;
             }
-        }
-        System.out.println(Arrays.toString(arr));
+            j++;
 
+        }
+        for(int k=0;k<=i;k++){
+            System.out.print(arr[k]+" ");
+        }
     }
 }
