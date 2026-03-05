@@ -2,13 +2,13 @@ import java.util.*;
 
 public class SubArrayDivision {
     public static void main(String[] args) {
-        List<Integer> list1 = Arrays.asList(1,2,3);
+        List<Integer> list1 = Arrays.asList(3,3,2,1,3);
         List<Integer> list2 = Arrays.asList(0,1,2);
 //        System.out.println(birthday(list,4,2));
 //        int[] arr={1, 3, 2, 6, 1, 2};
 //        System.out.println(migratoryBirds(list));
-        int[] arr={-1};
-        System.out.println(circularArrayRotation(list1,2,list2)) ;
+        int[] arr={0,0,1,0,0,1,1,0};
+        System.out.println( queensAttack(4, int k, int r_q, int c_q, List<List<Integer>> obstacles) ) ;
     }
 
     public static int birthday(List<Integer> s, int d, int m) {
@@ -268,4 +268,176 @@ public class SubArrayDivision {
             j--;
         }
     }
+
+    static int jumpingOnClouds(int[] c, int k) {
+
+        int n=c.length;
+        int energyDrained=0;
+        for(int i=k;i<=n;i+=k){
+            if(c[(i)%n]==0){
+                energyDrained++;
+            }else{
+                energyDrained+=3;
+            }
+        }
+
+        return 100-energyDrained;
+
+    }
+
+    public static int squares(int a, int b) {
+        // Write your code here
+        int count=0;
+        int n=2;
+        for(int i=1;i<=b;i+=n){
+            if(i*i>=a){
+                count++;
+            }
+            n=n*i+1;
+        }
+        return count;
+    }
+
+    public static List<Integer> cutTheSticks(List<Integer> arr) {
+        // Write your code here
+        int min=Integer.MAX_VALUE;
+        List<Integer> res=new LinkedList<>(arr);
+        List<Integer> ans=new ArrayList<>();
+
+        ans.add(arr.size());
+
+        while(res.size()>1){
+            for(int x:res){
+                if(min>x){
+                    min=x;
+                }
+            }
+
+            for(int i=0;i<res.size();i++){
+                res.set(i,res.get(i)-min);
+            }
+
+            if(res.contains(0)){
+                res.removeAll(Arrays.asList(0));
+            }
+
+            ans.add(res.size());
+            min=Integer.MAX_VALUE;
+        }
+
+        return ans;
+
+    }
+
+    public static int jumpingOnClouds(List<Integer> c) {
+        // Write your code here
+        int smallSteps=0;
+        int bigSteps=0;
+        int i=0;
+        while(i<c.size()){
+            if(i==c.size()-2){
+                smallSteps++;
+                i++;
+            }else{
+                if(c.get(i+2)!=1){
+                    bigSteps++;
+                    i+=2;
+                }else if(c.get(i+1)!=1){
+                    smallSteps++;
+                    i++;
+                }
+            }
+
+
+
+        }
+        return smallSteps+bigSteps;
+    }
+
+    public static int equalizeArray(List<Integer> arr) {
+        // Write your code here
+        HashMap<Integer,Integer> map=new HashMap<>();
+
+        for(int i:arr){
+            map.put(i,map.getOrDefault(i,0)+1);
+        }
+        int count=0;
+        int maxFreq=Integer.MIN_VALUE;
+        for(int x:map.keySet()){
+                maxFreq=Math.max(maxFreq, map.get(x));
+        }
+
+        return arr.size()-maxFreq;
+    }
+
+
+    public static int queensAttack(int n, int k, int r_q, int c_q, List<List<Integer>> obstacles) {
+        // Write your code here
+        int[][] board=new int[n][n];
+
+        int i=1;
+        int j=1;
+        List<Integer> pos=new ArrayList<>();
+        int count=0;
+        //left row
+        while(i>=1 && i<=n && j>=1 && j<=n ){
+            if(!obstacles.contains(Arrays.asList(r_q,--i))){
+                count++;
+            }else{
+                break;
+            }
+        }
+
+        //right row
+        while(i>=1 && i<=n && j>=1 && j<=n ){
+            if(!obstacles.contains(Arrays.asList(r_q,++i))){
+                count++;
+            }else{
+                break;
+            }
+        }
+
+        //column-up
+        while(i>=1 && i<=n && j>=1 && j<=n ){
+            if(!obstacles.contains(Arrays.asList(++i,c_q))){
+                count++;
+            }else{
+                break;
+            }
+        }
+
+        //column-down
+        while(i>=1 && i<=n && j>=1 && j<=n ){
+            if(!obstacles.contains(Arrays.asList(--i,c_q))){
+                count++;
+            }else{
+                break;
+            }
+        }
+
+        //digonal-up
+        i=r_q;
+        j=c_q;
+        while(i>=1 && i<=n && j>=1 && j<=n ){
+            if(!obstacles.contains(Arrays.asList(++i,++j))){
+                count++;
+            }else{
+                break;
+            }
+        }
+
+        //digonal_down
+        i=r_q;
+        j=c_q;
+        while(i>=1 && i<=n && j>=1 && j<=n ){
+            if(!obstacles.contains(Arrays.asList(--i,--j))){
+                count++;
+            }else{
+                break;
+            }
+        }
+
+        return count;
+    }
+
 }
