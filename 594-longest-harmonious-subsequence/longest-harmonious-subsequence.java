@@ -3,10 +3,8 @@ class Solution {
         int start=0;
         int n=nums.length;
         Arrays.sort(nums);
-        int max=nums[start];
-        int min=nums[start];
         int ans=0;
-        for(int end=1;end<n;end++){
+        for(int end=0;end<n;end++){
            
             int diff=nums[end]-nums[start];
             while(diff>1){
