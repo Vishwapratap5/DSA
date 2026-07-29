@@ -13,7 +13,7 @@ class Solution {
                  start++;
                  diff=nums[end]-nums[start];
             }
-            if(diff!=0) ans=Math.max(ans,end-start+1);
+            if(diff==1) ans=Math.max(ans,end-start+1);
         }
         return ans;
     }
