@@ -6,7 +6,7 @@ class Solution {
         int max=nums[start];
         int min=nums[start];
         int ans=0;
-        for(int end=1;end<n && start<n;end++){
+        for(int end=1;end<n;end++){
            
             int diff=nums[end]-nums[start];
             while(diff>1){
