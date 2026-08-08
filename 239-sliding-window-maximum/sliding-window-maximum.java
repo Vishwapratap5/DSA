@@ -12,14 +12,14 @@ class Solution {
             if(end-start+1<k){
                 end++;
             }else  if(end-start+1==k){
-                res[i]=map.lastKey();
+                res[start]=map.lastKey();
                 map.put(arr[start],map.getOrDefault(arr[start],0)-1);
                 if(map.get(arr[start])<=0){
                     map.remove(arr[start]);
                 }
                 start++;
                 end++;
-                i++;
+               // i++;
             }
         }
         return res;
