@@ -3,21 +3,25 @@ class Solution {
         int leftSum=0;
         int rightSum=0;
         int total=0;
-        if(nums.length==1){
-            return 0;
-        }
-        for(int x:nums){
-            total+=x;
+        int n=nums.length;
+
+        int[] prefix=new int[n];
+        int[] suffix=new int[n];
+
+        prefix[0]=0;
+        for(int i=1;i<n;i++){
+            prefix[i]=nums[i-1]+prefix[i-1];
         }
 
-        for(int i=0;i<nums.length;i++){
-          
-            rightSum=total-leftSum-nums[i];
+        suffix[n-1]=0;
+        for(int i=n-2;i>=0;i--){
+            suffix[i]=nums[i+1]+suffix[i+1];
+        }
 
-            if(leftSum==rightSum){
-                return i;
-            }
-            leftSum+=nums[i];
+        for(int i=0;i<n;i++){
+           if(prefix[i]==suffix[i]){
+            return i;
+           }
         }
         return -1;
     }
