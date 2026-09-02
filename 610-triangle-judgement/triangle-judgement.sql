@@ -1,7 +1,7 @@
 # Write your MySQL query statement below
-select X,Y,Z,
-case
-    when ( (x+y<=z) || (x+z<=y) ||(z+y<=x) ) then 'No'
-    else 'Yes'
+select x,y,z,
+case 
+      WHEN x + y > z AND x + z > y AND y + z > x THEN 'Yes' 
+        ELSE 'No' 
 end as triangle
-from Triangle;
+from Triangle ;
