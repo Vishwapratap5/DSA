@@ -22,7 +22,7 @@ class Solution {
 
     public  ArrayList<ArrayList<Integer>> mergeIntervals(ArrayList<ArrayList<Integer>> list){
         
-        list.sort(Comparator.comparingInt(innerList -> innerList.get(0)));
+     //   list.sort(Comparator.comparingInt(innerList -> innerList.get(0)));
         int start1=list.get(0).get(0);
         int end1=list.get(0).get(1);
         ArrayList<ArrayList<Integer>> res=new ArrayList<>();
