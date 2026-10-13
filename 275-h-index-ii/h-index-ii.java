@@ -2,13 +2,13 @@ class Solution {
     public int hIndex(int[] citations) {
     
       int n=citations.length;
-      for (int i = n; i >= 0; i--) {
-    int val = upperBound(citations, i);
-    if (i <= n - val) {
-        return i;
-    }
-}
-      return 0;
+      for(int i=n;i>=0;i--){
+        int val=upperBound(citations,i);
+        if(i<=n-val){
+            return i;
+        }
+      }
+      return -1;
 
     }
 
