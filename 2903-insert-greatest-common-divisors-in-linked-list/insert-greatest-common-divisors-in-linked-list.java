@@ -10,21 +10,26 @@
  */
 class Solution {
     public ListNode insertGreatestCommonDivisors(ListNode head) {
-        ListNode dummy=new ListNode(0,head);
-        ListNode current=head;
-        ListNode prev=dummy;
-
-        while(current.next!=null){
-            int GCD=gcd(current.val,current.next.val);
-            ListNode newNode=new ListNode(GCD);
-           newNode.next = current.next;
-            current.next = newNode;
-
-            current = newNode.next;
+        if (head == null || head.next == null) {
+            return head;
         }
-        return head;
-    }
 
+        ListNode dummy = new ListNode(0, head);
+        ListNode prev = head;
+        ListNode current = head.next;
+
+        while (current != null) {
+            int value = gcd(prev.val, current.val);
+            ListNode newNode = new ListNode(value);
+
+            prev.next = newNode;
+            newNode.next = current;
+
+            prev = current;
+            current = current.next;
+    }
+    return dummy.next; 
+    }
     public int gcd(int x,int y){
         while(x!=y){
             if(x>y){
