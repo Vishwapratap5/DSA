@@ -24,12 +24,24 @@ class Solution {
             sum+=fast.val;
 
             if(fast.val==0){
-                 ListNode newNode= new ListNode(sum);
+               /*  ListNode newNode= new ListNode(sum);
                  current.next=newNode;
                  current=current.next;
                  slow=fast;
                  fast=fast.next;
-                 sum=0; 
+                 sum=0; */
+               
+               slow.val = sum;
+                slow.next = fast.next;  // Skip the ending zero
+
+                slow = slow.next;
+
+                if (slow == null) {
+                    break;
+                }
+
+                fast = slow;
+                sum = 0;
             }else{
                 fast=fast.next;
             }
