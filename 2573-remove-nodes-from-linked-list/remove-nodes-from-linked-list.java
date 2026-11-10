@@ -1,30 +1,26 @@
 class Solution {
 
-    public ListNode removeNodes(ListNode head) {
+   public ListNode removeNodes(ListNode head) {
 
-        head = reverse(head);
-
-        int max = Integer.MIN_VALUE;
-
-        ListNode dummy = new ListNode(-1);
-        ListNode current = dummy;
-
-        while (head != null) {
-
-            if (head.val >= max) {
-
-                max = head.val;
-
-                current.next = head;
-                current = current.next;
-            }
-
-            head = head.next;
-        }
-
-        current.next = null;
-
-        return reverse(dummy.next);
+       ListNode current=head;
+      ListNode reverseHead=reverse(current);
+        ListNode dummy=new ListNode(-1);
+        dummy.next=reverseHead;
+       ListNode prev=dummy;
+         current=reverseHead;
+        
+        // Node prev=reverseHead;
+         while(current!=null){
+             ListNode temp=current.next;
+             
+             if(current.val<prev.val){
+                 prev.next=temp;
+             }else{
+                 prev=current;
+             }
+             current=temp;
+         }
+         return reverse(dummy.next);
     }
 
     public ListNode reverse(ListNode head) {
